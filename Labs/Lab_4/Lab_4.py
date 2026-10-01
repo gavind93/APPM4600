@@ -23,6 +23,7 @@ def driver():
 # use routines
     f = lambda x: x**3+x-4
     fprime = lambda x: 3*x**2 + 1
+    fprimeprime = lambda x: 6*x
     a = 1
     b = 4
 # f = lambda x: np.sin(x)
@@ -34,7 +35,7 @@ def driver():
     print('the error message reads:',ier)
     print('f(astar) =', f(astar))
 # define routines
-def bisection(f,fprime,a,b):
+def bisection(f,fprime,fprimeprime,a,b):
 # Inputs:
 # f,a,b - function and endpoints of initial interval
 # tol - bisection stops when interval length < tol
@@ -61,7 +62,7 @@ def bisection(f,fprime,a,b):
         return [astar, ier]
     count = 0
     d = 0.5*(a+b)
-    while (!((f(d)/fprime(d))>1)):
+    while ((1)):
         fd = f(d)
         if (fd ==0):
             astar = d
