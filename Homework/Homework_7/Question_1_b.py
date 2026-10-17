@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 def driver():
     # f = lambda x: np.exp(x)
     f = lambda x: 1/(1+(10*x)**2)
-    N = 20
+    N = 30
     ''' interval'''
     a = -1
     b = 1

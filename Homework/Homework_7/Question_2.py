@@ -66,13 +66,13 @@ def driver():
        
 
     plt.figure()    
-    plt.plot(xeval,fex,'ro-',label = "f(x)")
-    plt.plot(xeval,yeval_l,'bs--', label = "p(x)") 
+    plt.plot(xeval,fex,'r--',label = "f(x)")
+    plt.plot(xeval,yeval_l,'b--', label = "p(x)") 
     plt.legend()
 
     plt.figure() 
     err_l = abs(yeval_l-fex)
-    plt.semilogy(xeval,err_l,'ro--',label='lagrange')
+    plt.semilogy(xeval,err_l,'r--',label='lagrange')
     plt.legend()
     plt.show()
 
