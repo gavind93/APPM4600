@@ -31,7 +31,7 @@ import matplotlib.pyplot as plt
 
 # specify the quadrature method 
 # (eval_gauss_quad, eval_composite_trap, eval_composite_simpsons)
-method = eval_gauss_quad
+method = eval_composite_simpsons
 
 # interval of integration [a,b]
 a = 0.; b = 1.
@@ -65,7 +65,7 @@ for iM in range(nM):
   # non adaptive routine 
   # Note: the _,_ are dummy vars/Python convention 
   # to store uneeded returns from the routine
-  I_old,_,_ = method(M,a,b,f)
+  I_old = method(M,a,b,f)
   # adaptive routine
   I_new,X,nsplit = adaptive_quad(a,b,f,tol,M,method)
   err_old[iM] = np.abs(I_old-I_true)/I_true

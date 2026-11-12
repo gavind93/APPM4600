@@ -38,10 +38,10 @@ def eval_composite_trap(M,a,b,f):
     sum += f(a + i * h)
 
   s = (f(a) + f(b)) + (2*sum)
-  return (h/2)*s
+  return (h/2)*s,
 
 def eval_composite_simpsons(M,a,b,f):
-  '''
+  
   if M < 3 or M % 2 == 0:
     raise ValueError("n must be odd and >= 3")
   h = (b - a) / (M - 1)
@@ -49,7 +49,7 @@ def eval_composite_simpsons(M,a,b,f):
   for i in range(1, M - 1):
     s += (4 if i % 2 == 1 else 2) * f(a + i * h)
   return h * s / 3
-  ''' 
+  '
   return 1
 
 def eval_gauss_quad(M,a,b,f):
