@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.linspace(0,5,500)
+x = np.linspace(0.1,5,500)
 f = lambda x: np.sin(x)
 
 
